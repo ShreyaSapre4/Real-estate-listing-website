@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style> 
+        .container-fluid{
+            width: 97%;
+            height: 80vh;
+            margin-bottom: 120px;
+            overflow-y: scroll;
+            padding: 10px;
+            overflow-x: hidden;
+        }
+        .card-img-top{
+            height: 200px;
+        }
+        .card-body{
+            line-height: 18px;
+        }
+        .card{
+            box-shadow: 2px 2px 10px;
+        }
+        .buy_btn{
+            width: 100px;
+            font-size: 1.1rem;
+            padding: 10px 30px;
+            background-color: rgb(244, 45, 45);
+            color: white;
+            border: 0px;
+            border-radius: 20px; 
+        }
+
+        .buy_btn:hover{
+            background-color: rgb(192, 35, 35);
+            color: white;
+        }
+        #searchbar{
+            margin-left: 920px;
+        }
+    </style>
+</head>
+
+<body>
+
+    {{>navbar_logged}}
+    
+    <div class="container-fluid">
+        <form action="/buy_search" method="post">
+        <div id="searchbar">
+            <input type="search" placeholder="Search..." autocomplete="off" name="buy_search"><button><i
+                    class="fa fa-search"></i></button>
+        </div></form>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {{#each data}}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{this.Image}}" class="card-img-top" >
+                    <div class="card-body">
+                        <h4 class="card-title">{{this.Name}}</h4>
+                        <p class="card-text">{{this.Add}}</p>
+                        <p><b>Type:</b>{{this.Type}}</p>
+                        <p><b>Area:</b>{{this.Area}}</p>
+                        <p><b>Cost:</b>{{this.Cost}}</p>
+                        <a href="/contact" class="buy_btn">Buy</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .container-fluid {
+            width: 95%;
+            height: 95vh;
+            margin-bottom: 120px;
+        }
+
+        .col-md-4 img{
+           max-height: 200px;
+           max-width: 400px;
+        }
+
+        .card-body {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .row {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            padding: 0%;
+            box-shadow: 1px 1px 5px rgb(173, 169, 169);
+            color: black;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbar_logged}}
+    <div class="container-fluid">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://drooms.com/wp-content/uploads/2022/05/220201_What-can-we-except-to-see-from-the-real-estate-industry-in-2022.jpg"
+                    class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p>We believe that finding the right home is not just about bricks and mortar; it's about finding a place where memories are made, where dreams are nurtured, and where life unfolds. Whether you're a first-time buyer, a seasoned investor, or looking to sell your property, E-realtor is here to provide the support and resources you need to achieve your real estate goals. Thank you for choosing us as your real estate partner; we look forward to helping you find your place in the world.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p>With a team of experienced real estate professionals and cutting-edge technology, we've created a user-friendly space where you can effortlessly explore a wide range of properties, from cozy apartments in the heart of the city to sprawling estates in picturesque countryside settings. We understand that buying or selling a property is a significant life event, and our commitment is to make this process as smooth and stress-free as possible.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="https://gulflifego.com/wp-content/uploads/2023/09/202-1-1000x500.jpg"
+                    class="img-fluid rounded-start" alt="..." style="margin-left:71px">
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://djm-aerial.com/wp-content/uploads/2018/01/DJM-Aerial-Solutions-Aerial-Property-Images-1-e1519902963459-1000x500.jpg"
+                    class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p>At E-realtor, we're more than just a platform for buying and selling properties; we're your trusted partner on the journey to finding your dream home or making a successful property investment. Our mission is simple: to connect you with the perfect property that suits your unique needs and desires.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

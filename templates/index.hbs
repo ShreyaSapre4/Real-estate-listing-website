@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-realtor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css"  rel="stylesheet">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="popup-content">
+            <button id="closebtn"><i class="fa fa-close" id="close"></i></button>
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                <div>
+                    <label for="">Username</label>
+                    <div><input type="text" name="username" id="username" placeholder="Username" required autocomplete="off"></div>
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <div><input type="password" name="password" id="password" placeholder="Password" required autocomplete="off"></div>
+                </div>
+                <div>
+                    <button id="submitbtn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup2">
+        <div class="popup-content2">
+            <button id="closebtn"><i class="fa fa-close" id="close2"></i></button>
+            <h1>Sign up</h1>
+            <form action="/signup" method="post">
+                <div>
+                    <label for="">Name</label>
+                    <div><input type="text" name="name" placeholder="Name" id="name" required autocomplete="off"></div>
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <div><input type="email" name="email" placeholder="Email" id="email" required autocomplete="off"></div>
+                </div>
+                <div>
+                    <label for="">Username</label>
+                    <div><input type="text" name="username_signup" id="username_signup" placeholder="Username" required autocomplete="off"></div>
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <div><input type="text" name="password_signup" id="password_signup" placeholder="Password" required autocomplete="off"></div>
+                </div>
+                <label style="margin-top: -30px; margin-bottom: 10px;">Please login once you sign up!</label>
+                <div>
+                    <button id="submitbtn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{>navbar}}
+    <div id="photo">
+        <div id="searchbar">
+            <input type="search" placeholder="Search..." autocomplete="off"><button><i
+                    class="fa fa-search"></i></button>
+        </div>
+        <h1>Find the perfect home</h1>
+        <p>for you and your family...</p>
+    </div>
+
+    <div id="para">
+        Having a correct home is of paramount importance as it serves as the foundation of our daily lives. A home is not merely a physical structure but a sanctuary where we seek comfort, security, and a sense of belonging. It is a place where cherished memories are made, where we can unwind and recharge, and where our dreams take shape. Don't miss this rare opportunity to own a real gem that offers everything you've ever dreamed of in a home. Explore E-realtor now!  
+    </div>
+
+    <div id="options">
+        <div class="image-box"><a href="#" id="buy"><img src="/static/images/buy.jpg" class="image" alt="buy">
+            <h1 onmouseenter="opacity: 1">Buy</h1>
+            <p>Looking for a comfortable place to call your home? Buy a property now. Get yourself a permanant home</p></a>
+        </div>
+        <div class="image-box"><a href="#" id="sell"><img src="/static/images/sell.jpg" class="image" alt="sell">
+            <h1>Sell</h1>
+            <p>Want to sell your house? Find intersted buyers easily who match your criteria here.</p></a>
+        </div>
+        <div class="image-box"><a href="#" id="rent"><img src="/static/images/rent.jpg" class="image" alt="room">
+            <h1>Rent</h1>
+            <p>Find a place to rent that checks all your boxes for comfy homes. Rent a place now!</p></a>
+        </div>
+    </div>
+
+    {{>footer}}
+
+    <script>
+        document.getElementById("login").addEventListener("click", function(){
+            document.querySelector(".popup").style.display="flex";
+        })
+
+        document.getElementById("close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display="none";
+        })
+
+        document.getElementById("signup").addEventListener("click", function(){
+            document.querySelector(".popup2").style.display="flex";
+        })
+
+        document.getElementById("close2").addEventListener("click", function(){
+            document.querySelector(".popup2").style.display="none";
+        })
+    </script>
+</body>
+
+</html>
